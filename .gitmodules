@@ -1,0 +1,6 @@
+[submodule "GTI619_TP5_FRONTEND"]
+	path = GTI619_TP5_FRONTEND
+	url = https://github.com/gpoirier93/gti619-lab5
+[submodule "GTI619_TP5_BACKEND"]
+	path = GTI619_TP5_BACKEND
+	url = https://github.com/gpoirier93/gti619-lab5
