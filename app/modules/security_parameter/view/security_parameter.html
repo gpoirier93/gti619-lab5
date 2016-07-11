@@ -1,0 +1,131 @@
+<div class="page">
+
+    <section class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-heading-title">Security Parameters Management</div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-10">
+                    <form class="form-horizontal ng-pristine ng-valid" role="form" name="securityParameterForm">
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   ng-class="securityParameterForm.maxConnectAttempt.$invalid? 'color-danger' : ''">
+                                Max Connection Attempt :
+                            </label>
+
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control"
+                                       ng-class="securityParameterForm.maxConnectAttempt.$invalid ? 'ui-select-danger' : ''"
+                                       name="maxConnectAttempt" ng-model="securityParameters.maxConnectAttempt"
+                                       maxlength="1" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   ng-class="securityParameterForm.maxConnectAttemptDelay.$invalid? 'color-danger' : ''">
+                                Max Connection Attempt Delay :
+                            </label>
+
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control"
+                                       ng-class="securityParameterForm.maxConnectAttemptDelay.$invalid ? 'ui-select-danger' : ''"
+                                       name="maxConnectAttemptDelay" ng-model="securityParameters.maxConnectAttemptDelay"
+                                       maxlength="1" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   ng-class="securityParameterForm.maxConnectAttemptBlock.$invalid? 'color-danger' : ''">
+                                Max Connection Attempt Block :
+                            </label>
+
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control"
+                                       ng-class="securityParameterForm.maxConnectAttemptBlock.$invalid ? 'ui-select-danger' : ''"
+                                       name="maxConnectAttemptBlock" ng-model="securityParameters.maxConnectAttemptBlock"
+                                       maxlength="1" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   ng-class="securityParameterForm.timeChangePassword.$invalid? 'color-danger' : ''">
+                                Time To Change Password :
+                            </label>
+
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control"
+                                       ng-class="securityParameterForm.timeChangePassword.$invalid ? 'ui-select-danger' : ''"
+                                       name="timeChangePassword" ng-model="securityParameters.timeChangePassword"
+                                       maxlength="1" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   ng-class="securityParameterForm.canRecoverPassword.$invalid? 'color-danger' : ''">
+                                Can Recover Password :
+                            </label>
+
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control"
+                                       ng-class="securityParameterForm.canRecoverPassword.$invalid ? 'ui-select-danger' : ''"
+                                       name="canRecoverPassword" ng-model="securityParameters.canRecoverPassword"
+                                       maxlength="1" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   ng-class="securityParameterForm.passwordComplexityCheck.$invalid? 'color-danger' : ''">
+                                Password Complexity Check :
+                            </label>
+
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control"
+                                       ng-class="securityParameterForm.passwordComplexityCheck.$invalid ? 'ui-select-danger' : ''"
+                                       name="passwordComplexityCheck" ng-model="securityParameters.passwordComplexityCheck"
+                                       maxlength="1" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   ng-class="securityParameterForm.canUsePastPassword.$invalid? 'color-danger' : ''">
+                                Can Use Past Passwords :
+                            </label>
+
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control"
+                                       ng-class="securityParameterForm.canUsePastPassword.$invalid ? 'ui-select-danger' : ''"
+                                       name="canUsePastPassword" ng-model="securityParameters.canUsePastPassword"
+                                       maxlength="1" required/>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="col-sm-8">
+
+                                <input type="submit"  ng-disabled="securityParameterForm.$invalid"
+                                       value="Submit" class="btn btn-primary btn-w-md wam-btn-secondary"
+                                       ng-click="submit()"/>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="col-sm-8">
+                                <label>Error : {{ error }}</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
